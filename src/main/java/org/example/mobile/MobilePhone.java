@@ -7,16 +7,10 @@ public class MobilePhone {
     private String myNumber;
     private List<Contact> myContacts;
 
-    // Constructor with one parameter
-    public MobilePhone(String myNumber) {
-        this.myNumber = myNumber;
-        this.myContacts = new ArrayList<>();
-    }
-
-    // Constructor with two parameters (List<Contact> kabul ediyor)
+    // Constructor with myNumber and a list of contacts
     public MobilePhone(String myNumber, List<Contact> contacts) {
         this.myNumber = myNumber;
-        this.myContacts = (contacts != null) ? new ArrayList<>(contacts) : new ArrayList<>();
+        this.myContacts = new ArrayList<>(contacts); // Create a new ArrayList from the provided list
     }
 
     // Getter methods
